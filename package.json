@@ -1,0 +1,40 @@
+{
+  "name": "saga-cookie",
+  "version": "0.1.0",
+  "description": "redux-saga model for Cookie",
+  "main": "lib/model/cookie.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lint": "eslint src",
+    "build": "rm -rf lib && npx babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiaweilee/saga-cookie.git"
+  },
+  "keywords": [
+    "redux",
+    "saga",
+    "cookie"
+  ],
+  "author": "+v",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chiaweilee/saga-cookie/issues"
+  },
+  "homepage": "https://github.com/chiaweilee/saga-cookie#readme",
+  "dependencies": {
+    "aliba": "^0.2.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "eslint": "^5.15.2",
+    "eslint-config-ali": "^5.0.1",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
