@@ -2,7 +2,7 @@
 
 redux-saga model for Cookie 🍪.
 
-[![README](https://github.com/chiaweilee/saga-cookie/blob/master/_.jpg)]
+![README](https://github.com/chiaweilee/saga-cookie/blob/master/_.jpg)
 
 ## Installation
 
@@ -71,7 +71,7 @@ dispatch(setCookie({
 
 - forceUpdate
 
-*You should avoid to use manual operation to Cookie when using saga-cookie,*
+*You should avoid to do manual operation to Cookie when using saga-cookie,*
 **use `forceUpdate` if necessary.**
 
 ```javascript
