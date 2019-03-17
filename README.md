@@ -72,7 +72,7 @@ dispatch(setCookie({
 - forceUpdate
 
 *You should avoid to do manual operation to Cookie when using saga-cookie,*
-**use `forceUpdate` if necessary.**
+**make sure dispatch `forceUpdate` after manual operation if necessary.**
 
 ```javascript
 import { forceUpdate } from 'saga-cookie';
@@ -80,5 +80,5 @@ import { forceUpdate } from 'saga-cookie';
 
 ```javascript
 // force saga-cookie update
-dispatch(forceUpdate));
+dispatch(forceUpdate);
 ```
