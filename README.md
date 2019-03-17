@@ -2,6 +2,8 @@
 
 redux-saga model for Cookie 🍪.
 
+[![README](https://github.com/chiaweilee/saga-cookie/blob/master/_.jpg)]
+
 ## Installation
 
 ```
