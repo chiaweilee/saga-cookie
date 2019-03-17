@@ -18,7 +18,7 @@ npm install saga-cookie
 
 ```javascript
 // src/models/cookie.js
-export { default, forceUpdate, setCookie, DELETE } from 'saga-cookie';
+export { default } from 'saga-cookie';
 ```
 
 - Connect
