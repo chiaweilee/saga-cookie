@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "umi dev"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "umi": "^2.4.2",
+    "umi-plugin-react": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

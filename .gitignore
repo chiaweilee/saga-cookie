@@ -1,2 +1,3 @@
 .idea
 node_modules
+/example/dva-umi/src/pages/.umi/

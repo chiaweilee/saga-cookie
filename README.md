@@ -10,44 +10,32 @@ redux-saga model for Cookie 🍪.
 npm install saga-cookie
 ```
 
+## Configuarition
+
+![Dva-Umi](https://github.com/chiaweilee/saga-cookie/blob/master/example/dva-umi)
+
+## Example
+
+```
+npm run start:dva-umi
+```
+
 ## Usage
 
-### UmiJs
-
-- Create model
-
-```javascript
-// src/models/cookie.js
-export { default } from 'saga-cookie';
-```
-
-- Connect
-
-```javascript
-// src/pages/example.js
-export default withRouter(
-  connect(({ cookie }) => ({ // ↩
-    cookie, // ↩
-  }))(Example)
-);
-```
-
-- Render
+- Render Cookie
 
 ```jsx
-<h3>{this.props.cookie.a}</h3>
+{props.cookie.hello}
 ```
 
-- Dispatch
+- Dispatch Cookie
 
 ```javascript
 import { setCookie, DELETE } from 'saga-cookie';
-```
 
-```javascript
-// update cookie
+// set-cookie
 dispatch(setCookie({
-  a: Math.random(),
+  hello: 'saga-cookie',
 }));
 ```
 
@@ -56,7 +44,7 @@ dispatch(setCookie({
 dispatch(setCookie(
   (cookie) => {
     return {
-      a: cookie.a + 1,
+      count: cookie.count + 1,
     }
   }
 ));
@@ -65,14 +53,14 @@ dispatch(setCookie(
 ```javascript
 // delete cookie
 dispatch(setCookie({
-  a: DELETE,
+  hello: DELETE,
 }));
 ```
 
-- forceUpdate
+- Force Update
 
-*You should avoid to do manual operation to Cookie when using saga-cookie,*
-**make sure dispatch `forceUpdate` after manual operation if necessary.**
+*You should avoid to do manual operation to Cookies when using saga-cookie,*
+**use `forceUpdate` to reload cookies from BOM**
 
 ```javascript
 import { forceUpdate } from 'saga-cookie';

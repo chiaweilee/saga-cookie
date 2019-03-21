@@ -7,6 +7,7 @@
     "lib"
   ],
   "scripts": {
+    "start:dva-umi": "cd example/dva-umi && npm run start",
     "lint": "eslint src",
     "build": "rm -rf lib && npx babel src --out-dir lib"
   },
@@ -35,6 +36,7 @@
     "@babel/preset-env": "^7.3.4",
     "eslint": "^5.15.2",
     "eslint-config-ali": "^5.0.1",
-    "eslint-plugin-import": "^2.16.0"
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-react": "^7.12.4"
   }
 }
