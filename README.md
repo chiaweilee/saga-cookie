@@ -12,7 +12,7 @@ npm install saga-cookie
 
 ## Configuarition
 
-![Dva-Umi](https://github.com/chiaweilee/saga-cookie/blob/master/example/dva-umi)
+[Dva-Umi](https://github.com/chiaweilee/saga-cookie/blob/master/example/dva-umi)
 
 ## Example
 
@@ -38,6 +38,8 @@ dispatch(setCookie({
   hello: 'saga-cookie',
 }));
 ```
+
+*tips: setCookie is a `setState` like method*
 
 ```javascript
 // update cookie
