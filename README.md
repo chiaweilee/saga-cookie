@@ -39,6 +39,8 @@ dispatch(setCookie({
 }));
 ```
 
+*tips: setCookie is a `setState` like method*
+
 ```javascript
 // update cookie
 dispatch(setCookie(
