@@ -12,26 +12,21 @@ npm install saga-cookie
 
 ## Configuarition
 
-[Dva-Umi](https://github.com/chiaweilee/saga-cookie/blob/master/example/dva-umi)
-
-## Example
-
-```
-npm run start:dva-umi
-```
+* [Dva-Umi](https://github.com/chiaweilee/saga-cookie/blob/master/example/dva-umi)
+* [Redux](https://github.com/chiaweilee/saga-cookie/blob/master/example/redux)
 
 ## Usage
 
-- Render Cookie
+#### Render Cookie
 
 ```jsx
 {props.cookie.hello}
 ```
 
-- Dispatch Cookie
+#### Dispatch Cookie
 
 ```javascript
-import { setCookie, DELETE } from 'saga-cookie';
+import { setCookie } from 'saga-cookie';
 
 // set-cookie
 dispatch(setCookie({
@@ -44,7 +39,7 @@ dispatch(setCookie({
 ```javascript
 // update cookie
 dispatch(setCookie(
-  (cookie) => {
+  function (cookie) {
     return {
       count: cookie.count + 1,
     }
@@ -55,11 +50,11 @@ dispatch(setCookie(
 ```javascript
 // delete cookie
 dispatch(setCookie({
-  hello: DELETE,
+  hello: null,
 }));
 ```
 
-- Force Update
+#### Force Update
 
 *You should avoid to do manual operation to Cookies when using saga-cookie,*
 **use `forceUpdate` to reload cookies from BOM**

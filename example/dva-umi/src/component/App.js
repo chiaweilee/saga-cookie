@@ -1,12 +1,10 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
-import { connect } from 'dva';
-import { withRouter } from 'react-router-dom';
-import {
-  /* forceUpdate, */ setCookie,
-  DELETE,
-} from '../../../../src/model/cookie';
+import pair from 'aliba/lib/key-value/pair';
+import $delCookie from 'aliba/lib/set-cookie/delCookie';
+import { forceUpdate, setCookie } from '../../../../src/';
 
-function App({ dispatch, cookie }) {
+export default function ({ dispatch, cookie }) {
   const [add, setAdd] = useState('hello');
   const [del, setDel] = useState('hello');
   const [addValue, setAddValue] = useState('saga-cookie');
@@ -56,7 +54,7 @@ function App({ dispatch, cookie }) {
           <pre>
             dispatch(setCookie({'{'}
             {`${del || ''}`}
-            {`${del ? ': DELETE' : ''}`}
+            {`${del ? ': null' : ''}`}
             {'}'}))
           </pre>
           <input
@@ -67,18 +65,44 @@ function App({ dispatch, cookie }) {
             placeholder={'cookie-name'}
           />
           :
-          <input value={'DELETE'} readOnly />
+          <input value={'null'} readOnly />
           <button
             onClick={() => {
               dispatch(
                 setCookie({
-                  [del]: DELETE,
+                  [del]: null,
                 })
               );
             }}
           >
             delete
           </button>
+        </label>
+      </div>
+      <div>
+        <label>
+          <h3>force-update</h3>
+          <pre>dispatch(forceUpdate)</pre>
+          {(!cookie || !cookie.test_force_update) ? (
+            <button
+              onClick={() => {
+                const rnd = Math.floor(Math.random() * 1000);
+                document.cookie = `test_force_update=${rnd}`;
+                dispatch(forceUpdate);
+              }}
+            >
+              test forceUpdate (add)
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                document.cookie = `test_force_update=${pair($delCookie)}`;
+                dispatch(forceUpdate);
+              }}
+            >
+              test forceUpdate (delete)
+            </button>
+          )}
         </label>
       </div>
       <div
@@ -90,9 +114,3 @@ function App({ dispatch, cookie }) {
     </div>
   );
 }
-
-export default withRouter(
-  connect(({ cookie }) => ({
-    cookie,
-  }))(App)
-);

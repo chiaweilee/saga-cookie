@@ -10,11 +10,6 @@ export default {
       dynamicImport: false,
       title: 'umi',
       dll: false,
-      routes: {
-        exclude: [
-          /components\//,
-        ],
-      },
     }],
   ],
 }
