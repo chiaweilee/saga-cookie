@@ -18,7 +18,7 @@ npm install saga-cookie
 
 ## Usage
 
-#### Render Cookie
+#### Render Cookie from Props
 
 ```jsx
 {props.cookie.hello}
@@ -26,32 +26,27 @@ npm install saga-cookie
 
 #### Dispatch Cookie
 
-```javascript
+*setCookie is just like `React`'s `setState`*
+
+```jsx
 import { setCookie } from 'saga-cookie';
 
 // set-cookie
 dispatch(setCookie({
-  hello: 'saga-cookie',
+  hello: 'hello',
 }));
-```
 
-*tips: setCookie is a `setState` like method*
-
-```javascript
-// update cookie
-dispatch(setCookie(
-  function (cookie) {
-    return {
-      count: cookie.count + 1,
-    }
+dispatch(setCookie((cookie) => {
+  return {
+    saga: cookie.hello + 'saga cookie',
   }
-));
-```
+}, function () {
+  // callback
+}));
 
-```javascript
 // delete cookie
 dispatch(setCookie({
-  hello: null,
+  saga: null,
 }));
 ```
 
