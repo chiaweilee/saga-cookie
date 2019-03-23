@@ -1,6 +1,6 @@
 {
   "name": "saga-cookie",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "redux-saga model for Cookie",
   "main": "lib/model/cookie.js",
   "files": [
