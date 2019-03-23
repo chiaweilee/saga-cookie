@@ -1,8 +1,8 @@
 # [Saga-Cookie](#) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/chiaweilee/aliba/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/aliba.svg?style=flat)](https://www.npmjs.com/package/aliba) [![Coverage Status](https://img.shields.io/coveralls/chiaweilee/aliba/master.svg?style=flat)](https://coveralls.io/github/chiaweilee/aliba?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#)
 
-redux-saga model for Cookie 🍪.
+Use Cookie as Redux state. 🍪
 
-![README](https://github.com/chiaweilee/saga-cookie/blob/master/_.jpg)
+![Workflow](https://github.com/chiaweilee/saga-cookie/blob/master/_.jpg)
 
 ## Installation
 
