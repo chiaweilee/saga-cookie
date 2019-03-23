@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/chiaweilee/saga-cookie#readme",
   "dependencies": {
-    "aliba": "^0.2.5"
+    "aliba": "^0.2.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

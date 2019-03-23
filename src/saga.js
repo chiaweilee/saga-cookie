@@ -2,7 +2,6 @@
 import forEach from 'aliba/lib/_/forEach';
 import unpair from 'aliba/lib/key-value/unpair';
 import $setCookie from 'aliba/lib/set-cookie';
-import $delCookie from 'aliba/lib/set-cookie/delCookie';
 
 export const forceUpdate = {
   type: 'cookie/__SAGA_COOKIE_FORCE_UPDATE__',
@@ -23,7 +22,6 @@ export default {
         if (value === null) {
           delete state[key];
           delete cookie[key];
-          $setCookie({ [key]: $delCookie });
         }
       });
 

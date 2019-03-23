@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import pair from 'aliba/lib/key-value/pair';
-import $delCookie from 'aliba/lib/set-cookie/delCookie';
 import { forceUpdate, setCookie } from '../../../../src/';
 
 export default function ({ dispatch, cookie }) {
@@ -96,7 +95,10 @@ export default function ({ dispatch, cookie }) {
           ) : (
             <button
               onClick={() => {
-                document.cookie = `test_force_update=${pair($delCookie)}`;
+                document.cookie = `test_force_update=${pair({
+                  value: '',
+                  expires: 'Thu, 01 Jan 1970 00:00:01 GMT',
+                })}`;
                 dispatch(forceUpdate);
               }}
             >
