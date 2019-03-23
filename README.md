@@ -12,7 +12,8 @@ npm install saga-cookie
 
 ## Configuarition
 
-* [Dva-Umi](https://github.com/chiaweilee/saga-cookie/blob/master/example/dva-umi)
+* [UmiJS Dva/Saga](https://github.com/chiaweilee/saga-cookie/blob/master/example/dva-umi)
+* [Redux-Saga](#) *TODO*
 * [Redux](https://github.com/chiaweilee/saga-cookie/blob/master/example/redux)
 
 ## Usage
