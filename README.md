@@ -16,6 +16,10 @@ npm install saga-cookie
 * [Redux-Saga](#) *TODO*
 * [Redux](https://github.com/chiaweilee/saga-cookie/blob/master/example/redux)
 
+## Example
+
+[Examples](https://github.com/chiaweilee/saga-cookie/blob/master/example/dva-umi)
+
 ## Usage
 
 #### Render Cookie from Props
@@ -38,7 +42,7 @@ dispatch(setCookie({
 
 dispatch(setCookie((cookie) => {
   return {
-    saga: cookie.hello + 'saga cookie',
+    hello: cookie.hello + 'saga cookie',
   }
 }, function () {
   // callback
@@ -46,7 +50,7 @@ dispatch(setCookie((cookie) => {
 
 // delete cookie
 dispatch(setCookie({
-  saga: null,
+  hello: null,
 }));
 ```
 
