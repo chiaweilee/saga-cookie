@@ -42,7 +42,7 @@ dispatch(setCookie({
 
 dispatch(setCookie((cookie) => {
   return {
-    hello: cookie.hello + 'saga cookie',
+    hello: cookie.hello + ' saga cookie!',
   }
 }, function () {
   // callback
@@ -57,6 +57,7 @@ dispatch(setCookie({
 #### Force Update
 
 *You should avoid to do manual operation to Cookies when using saga-cookie,*
+
 **use `forceUpdate` to reload cookies from BOM**
 
 ```javascript
