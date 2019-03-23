@@ -40,6 +40,17 @@ dispatch(setCookie({
   hello: 'hello',
 }));
 
+dispatch(setCookie({
+  hello: {
+    value: 'hello',
+    path: '/',
+    domain: 'xxx.com',
+    'max-age': 1000,
+    expires: 'Wed, 14 Jun 2017 07:00:00 GMT',
+    secure: true
+  },
+}));
+
 dispatch(setCookie((cookie) => {
   return {
     hello: cookie.hello + ' saga cookie!',
